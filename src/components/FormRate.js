@@ -1,4 +1,4 @@
-export default function FormRate({ num }) {
+export default function FormRate({ num, handleClickRadio }) {
   return (
     <div className="card__rate">
       <label htmlFor={`rate-${num}`} className="card__label">
@@ -11,6 +11,7 @@ export default function FormRate({ num }) {
         id={`rate-${num}`}
         value={`${num}`}
         className="card__input"
+        onClick={handleClickRadio}
       />
     </div>
   );

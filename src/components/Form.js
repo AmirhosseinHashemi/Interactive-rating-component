@@ -1,11 +1,17 @@
 import FormRate from "./FormRate";
 
-export default function Form() {
+export default function Form({ onSubmitForm, onClickRadio }) {
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    onSubmitForm();
+  }
+
   return (
-    <form className="card__form">
+    <form className="card__form" onSubmit={handleSubmit}>
       <fieldset>
         {Array.from({ length: 5 }, (_, i) => i + 1).map((num) => (
-          <FormRate num={num} key={num} />
+          <FormRate num={num} handleClickRadio={onClickRadio} key={num} />
         ))}
       </fieldset>
 
