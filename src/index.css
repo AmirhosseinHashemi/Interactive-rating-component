@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "overpass-regular";
+  src: url(../public/fonts/Overpass-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "overpass-bold";
+  src: url(../public/fonts/Overpass-Bold.ttf) format("truetype");
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(216, 12%, 8%);
+  font-family: "overpass-regular";
+  line-height: 1.5;
+  color: #fff;
+}
+
+.wrapper {
+  min-width: 18rem;
+  max-width: 24rem;
+  margin: 0 1rem;
+}
+
+.card {
+  background-color: hsl(213, 19%, 18%);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+@media only screen and (min-width: 36rem) {
+  .card {
+    padding: 1.8rem;
+  }
+}
+
+.card__star-icon {
+  background-color: hsl(213, 19%, 25%);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  font-family: "overpass-bold";
+  margin: 1rem 0 0 0;
+}
+
+.card__caption {
+  font-size: 0.9rem;
+  color: hsl(217, 12%, 63%);
+  font-family: "overpass-regular";
+  margin-top: 0.5rem;
+}
+
+.card__form {
+  margin-top: 1.5rem;
+}
+.card__form fieldset {
+  padding: 0;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__rate {
+  position: relative;
+  width: 2.6rem;
+  height: 2.6rem;
+}
+@media only screen and (min-width: 36rem) {
+  .card__rate {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.card__label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-family: "overpass-bold";
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.card__input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  background-color: hsl(213, 19%, 25%);
+  color: hsl(217, 12%, 63%);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.card__input:checked,
+.card__input:focus {
+  outline: none;
+  border: none;
+  background-color: hsl(217, 12%, 63%);
+}
+@media only screen and (min-width: 64rem) {
+  .card__input:hover {
+    background-color: hsl(25, 97%, 53%);
+  }
+}
+
+.card__button {
+  width: 100%;
+  font-family: "overpass-regular";
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.063rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+  outline: none;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.8rem 0;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.card__button:focus {
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(0, 0%, 100%);
+}
+@media only screen and (min-width: 64rem) {
+  .card__button:hover {
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(0, 0%, 100%);
+  }
+}
+
+.thank {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(213, 19%, 18%);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+@media only screen and (min-width: 36rem) {
+  .thank {
+    padding: 1.8rem;
+  }
+}
+
+.thank__icon {
+  margin: 1rem 0 1.5rem 0;
+}
+.thank__icon img {
+  width: 10rem;
+  height: 6.25rem;
+}
+
+.thank__selected-rate {
+  background-color: hsl(213, 19%, 25%);
+  color: hsl(25, 97%, 53%);
+  font-size: 0.9rem;
+  font-family: "overpass-regular";
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+}
+
+.thank__title {
+  font-size: 1.5rem;
+  font-family: "overpass-bold";
+  color: hsl(0, 0%, 100%);
+  margin: 2rem 0 0 0;
+}
+
+.thank__caption {
+  font-size: 0.9rem;
+  font-family: "overpass-regular";
+  color: hsl(217, 12%, 63%);
+  text-align: center;
+}
