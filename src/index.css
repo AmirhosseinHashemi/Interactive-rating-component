@@ -117,7 +117,7 @@ body {
   border: none;
   background-color: hsl(217, 12%, 63%);
 }
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 30rem) {
   .card__input:hover {
     background-color: hsl(25, 97%, 53%);
   }
@@ -143,7 +143,7 @@ body {
   color: hsl(25, 97%, 53%);
   background-color: hsl(0, 0%, 100%);
 }
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 30rem) {
   .card__button:hover {
     color: hsl(25, 97%, 53%);
     background-color: hsl(0, 0%, 100%);
