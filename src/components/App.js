@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Description from "./Description";
 import Form from "./Form";
+import Message from "./Message";
 
 export default function App() {
   const [submitted, setSubmitted] = useState(false);
@@ -18,7 +19,7 @@ export default function App() {
     <div className="wrapper">
       <main>
         {submitted ? (
-          `You selected ${selected} out of 5`
+          <Message num={selected} />
         ) : (
           <section className="card">
             <Description />
